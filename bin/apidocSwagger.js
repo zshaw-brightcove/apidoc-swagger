@@ -126,7 +126,7 @@ var argv = nomnom
     help: 'Treat parameters from non standard groups as type definitions.'
   })
 
-  .option('ignore-groups', {
+  .option('ignore-group', {
     help: 'Group name to ignore as type definition (case insentive, one or more seperated by `,`)).',
     list: true,
     'default': null
@@ -202,7 +202,7 @@ var options = {
   markdown: argv['markdown'],
   marked: resolveMarkdownOptions(argv),
   types: argv['types'],
-  ignoreGroups: argv['ignore-groups'] == null ? [] : argv['ignore-groups']
+  ignoreGroups: argv['ignore-group'] == null ? [] : argv['ignore-group']
 };
 
 if (typeof options.src === 'string') {
